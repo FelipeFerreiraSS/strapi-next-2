@@ -1,9 +1,14 @@
 import styles from '../styles/Home.module.css'
+import MarkdownIt from 'markdown-it'
 
 export default function Home(props) {
   const teste = "http://localhost:1337"
   const teste2 = props.post[0].imagem.url
-  console.log(teste + teste2)
+
+  const md = new MarkdownIt({
+    html: true
+  })
+  const htmlTexto = md.render(props.post[0].texto)
 
   return (
     <div className={styles.container}>
@@ -12,7 +17,7 @@ export default function Home(props) {
           <h1>{item.Titulo}</h1>
           <span>{item.Data}</span>
           <img src={teste + teste2} alt={item.Titulo}/>
-          <p>{item.texto}</p>
+          <section dangerouslySetInnerHTML={{__html: htmlTexto}}></section>
         </div>
       ))}
     </div>
