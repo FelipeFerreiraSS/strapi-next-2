@@ -7,6 +7,17 @@
   width: 600px;
 }
 
+.containerPost {
+  min-height: 100vh;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-top: 350px;
+}
+
 .container {
   min-height: 100vh;
   padding: 0 0.5rem;

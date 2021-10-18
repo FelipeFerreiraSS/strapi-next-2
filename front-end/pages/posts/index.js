@@ -1,4 +1,4 @@
-import styles from '../styles/Home.module.css'
+import styles from '../../styles/Home.module.css'
 import MarkdownIt from 'markdown-it'
 
 export default function Posts(props) {
@@ -11,7 +11,7 @@ export default function Posts(props) {
   const htmlTexto = md.render(props.post[0].texto)
 
   return (
-    <div className={styles.container}>
+    <div className={styles.containerPost}>
       {props.post.map((item) => (
         <div key={item.id} className={styles.post}>
           <h1>{item.Titulo}</h1>
