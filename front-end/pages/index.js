@@ -12,6 +12,7 @@ export default function Home(props) {
       {props.post.map((item) => (
         <div key={item.id} className={styles.post}>
           <h1>{item.Titulo}</h1>
+          <h2>{item.Resumo}</h2>
           <span>{item.Data}</span>
           <img src={item.imagem.name} alt={item.Titulo}/>
         </div>
