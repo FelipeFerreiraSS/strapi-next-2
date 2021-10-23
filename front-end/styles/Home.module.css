@@ -10,9 +10,21 @@
 
 .container div {
   margin: 20px;
-  display: flex;
 }
 
 .container img {
   width: 300px;
+}
+
+.posts {
+  display: flex;
+}
+
+.containerPost {
+  width: 900px;
+  margin: auto;
+}
+
+.containerPost iframe {
+  margin: auto;
 }
