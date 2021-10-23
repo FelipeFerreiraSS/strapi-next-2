@@ -8,16 +8,21 @@ export default function Home(props) {
   })
 
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
+      <h1> Todos os posts </h1>
       {props.post.map((item) => (
-        <div key={item.id} className={styles.post}>
-          <h1>{item.Titulo}</h1>
-          <h2>{item.Resumo}</h2>
-          <span>{item.Data}</span>
-          <img src={item.imagem.name} alt={item.Titulo}/>
+        <div>
+          <div key={item.id}>
+            <h2>{item.Titulo}</h2>
+            <p>{item.Resumo}</p>
+            <span>{item.Data}</span>
+            <div>
+              <img src={item.imagem.name} alt={item.Titulo}/>
+            </div>
+          </div>
         </div>
       ))}
-    </div>
+    </section>
   )
 }
 
