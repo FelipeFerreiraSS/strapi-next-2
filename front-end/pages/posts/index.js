@@ -13,8 +13,9 @@ export default function Posts(props) {
   return (
     <div className={styles.containerPost}>
       {props.post.map((item) => (
-        <div key={item.id} className={styles.post}>
+        <div key={item.id}>
           <h1>{item.Titulo}</h1>
+          <p>{item.Resumo}</p>
           <span>{item.Data}</span>
           <img src={teste + teste2} alt={item.Titulo}/>
           <section dangerouslySetInnerHTML={{__html: htmlTexto}}></section>

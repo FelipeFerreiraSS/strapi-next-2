@@ -16,15 +16,40 @@
   width: 300px;
 }
 
-.posts {
+.postsHome {
   display: flex;
 }
+
+/* css posts  */
 
 .containerPost {
   width: 900px;
   margin: auto;
 }
 
-.containerPost iframe {
-  margin: auto;
+.containerPost h1 {
+  width: 900px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.containerPost img {
+  width: 100%;
+}
+
+.containerPost span {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+/* .containerPost section iframe {
+  width: 900px; 
+  height: 278px; 
+  border:0; 
+  transform: 
+  scale(1); 
+  overflow:hidden;
+} */
