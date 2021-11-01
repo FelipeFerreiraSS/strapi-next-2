@@ -35,6 +35,9 @@
     "Resumo": {
       "type": "text",
       "required": true
+    },
+    "slog": {
+      "type": "string"
     }
   }
 }
