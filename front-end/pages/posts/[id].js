@@ -2,13 +2,14 @@ import styles from '../../styles/Home.module.css'
 import MarkdownIt from 'markdown-it'
 
 export default function Posts(props) {
-  const teste = "http://localhost:1337"
-  const teste2 = props.post[0].imagem.url
+  // const teste = "http://localhost:1337"
+  // const teste2 = props.post[0].imagem.url
 
   const md = new MarkdownIt({
     html: true
   })
-  const htmlTexto = md.render(props.post[0].texto)
+  // const htmlTexto = md.render(props.post[0].texto)
+  const htmlTexto = md.render(props.post.texto)
 
   return (
     <div className={styles.containerPost}>
@@ -26,7 +27,7 @@ export default function Posts(props) {
 }
 
 export async function getServerSideProps() {
-  const res = await fetch('http://localhost:1337/posts')
+  const res = await fetch(`http://localhost:1337/posts${id}`)
   .then(res => res.json())
   return {
     props: {
