@@ -26,8 +26,8 @@ export default function Posts(props) {
   )
 }
 
-export async function getServerSideProps() {
-  const res = await fetch(`http://localhost:1337/posts${id}`)
+export async function getStaticProps(context) {
+  const res = await fetch(`http://localhost:1337/posts${context.params.id}`)
   .then(res => res.json())
   return {
     props: {
