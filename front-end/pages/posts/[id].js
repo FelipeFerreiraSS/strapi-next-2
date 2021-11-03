@@ -9,13 +9,16 @@ export default function Posts({info}) {
 
   const htmlTexto = md.render(info.texto)  
 
+  console.log(`http://localhost:1337/${info.imagem.url}`)
+
+
   return (
     <div className={styles.containerPost}>
         <div>
           <h1>{info.Titulo}</h1>
           <p>{info.Resumo}</p>
           <span>{info.Data}</span>
-          <img src={info.imagem.name} alt={info.Titulo}/>
+          <img src={`http://localhost:1337${info.imagem.url}`} alt={info.Titulo}/>
           <section dangerouslySetInnerHTML={{__html: htmlTexto}}></section>
         </div>
     </div>

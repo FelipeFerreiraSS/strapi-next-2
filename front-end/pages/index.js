@@ -18,7 +18,7 @@ export default function Home(props) {
               <p>{item.Resumo}</p>
               <span>{item.Data}</span>
               <div>
-                <img src={item.imagem.name} alt={item.Titulo}/>
+                <img src={`http://localhost:1337${item.imagem.url}`} alt={item.Titulo}/>
               </div>
             </div>
           </a>
