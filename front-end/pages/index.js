@@ -12,7 +12,7 @@ export default function Home(props) {
       <h1> Todos os posts </h1>
       {props.post.map((item) => (
         <div>
-          <a href={`/post/${item.id}`}>
+          <a href={`posts/${item.id}`}>
             <div key={item.id} className={styles.postsHome}>
               <h2>{item.Titulo}</h2>
               <p>{item.Resumo}</p>
