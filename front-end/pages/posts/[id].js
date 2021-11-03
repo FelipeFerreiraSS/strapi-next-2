@@ -15,6 +15,9 @@ export default function Posts({info}) {
   return (
     <div className={styles.containerPost}>
         <div>
+          <a href="http://192.168.18.6:3000/">
+            <button>Home</button>
+          </a>
           <h1>{info.Titulo}</h1>
           <p>{info.Resumo}</p>
           <span>{info.Data}</span>
