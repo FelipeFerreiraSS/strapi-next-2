@@ -11,8 +11,8 @@ export default function Home(props) {
     <section className={styles.container}>
       <h1> Todos os posts </h1>
       <ul>
-        <li><a href="#">Front-end</a></li>
-        <li><a href="#">Back-end</a></li>
+        <li><a href="categories/front">Front-end</a></li>
+        <li><a href="categories/back">Back-end</a></li>
       </ul>
       {props.post.map((item) => (
         <div>
