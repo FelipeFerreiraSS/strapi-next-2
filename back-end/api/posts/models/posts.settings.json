@@ -38,6 +38,10 @@
     },
     "slog": {
       "type": "string"
+    },
+    "categories": {
+      "via": "posts",
+      "collection": "category"
     }
   }
 }
