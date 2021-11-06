@@ -20,7 +20,7 @@ export default function Posts({info}) {
               <button>Home</button>
             </a>
           </div>
-          <h1>{info.Titulo}</h1>
+          <h1>{info.title}</h1>
           <p>{info.Resumo}</p>
           <span>{info.Data}</span>
           <img src={`http://localhost:1337${info.imagem.url}`} alt={info.Titulo}/>

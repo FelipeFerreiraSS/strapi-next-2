@@ -19,7 +19,7 @@ export default function Home({front}) {
             <div>
             <a href={`http://192.168.18.6:3000/posts/${item.id}`}>
                 <div key={item.id} className={styles.postsHome}>
-                <h2>{item.Titulo}</h2>
+                <h2>{item.title}</h2>
                 <p>{item.Resumo}</p>
                 <span>{item.Data}</span>
                 <div>
