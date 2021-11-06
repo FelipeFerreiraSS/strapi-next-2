@@ -12,7 +12,7 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Titulo": {
+    "title": {
       "type": "string",
       "required": true
     },
@@ -36,7 +36,7 @@
       "type": "text",
       "required": true
     },
-    "slog": {
+    "slug": {
       "type": "string"
     },
     "categories": {
