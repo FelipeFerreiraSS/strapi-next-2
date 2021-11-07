@@ -31,7 +31,7 @@ export default function Posts({info}) {
 }
 
 export async function getServerSideProps(context) {
-  const res = await fetch(`http://192.168.18.6:3000/api/posts/${context.params.id}`)
+  const res = await fetch(`http://192.168.18.6:3000/api/posts/${context.params.slug}`)
   const json = await res.json()
   return {
     props: {

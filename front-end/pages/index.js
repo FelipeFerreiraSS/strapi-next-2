@@ -20,7 +20,7 @@ export default function Home(props) {
       </div>
       {props.post.map((item) => (
         <div>
-          <a href={`posts/${item.id}`}>
+          <a href={`posts/${item.slug}`}>
             <div key={item.id} className={styles.postsHome}>
               <h2>{item.title}</h2>
               <p>{item.Resumo}</p>
