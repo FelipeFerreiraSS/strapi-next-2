@@ -10,10 +10,14 @@ export default function Home(props) {
   return (
     <section className={styles.container}>
       <h1> Todos os posts </h1>
-      <ul>
-        <li><a href="categories/front">Front-end</a></li>
-        <li><a href="categories/back">Back-end</a></li>
-      </ul>
+      <div className={styles.categories}>
+          <button>
+            <a href="categories/front">Front-end</a>
+          </button>
+          <button>
+            <a href="categories/back">Back-end</a>
+          </button>
+      </div>
       {props.post.map((item) => (
         <div>
           <a href={`posts/${item.id}`}>

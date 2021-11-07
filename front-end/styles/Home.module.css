@@ -57,6 +57,18 @@
   font-size: 18px;
 }
 
+.categories{
+  display: flex;
+}
+
+.categories button {
+  margin: 10px 30px;
+  width: 100px;
+  height: 30px;
+  border-color: black;
+  border-radius: 10px;
+}
+
 /* .containerPost section iframe {
   width: 900px; 
   height: 278px; 
