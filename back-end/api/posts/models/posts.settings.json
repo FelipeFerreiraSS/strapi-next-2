@@ -36,12 +36,13 @@
       "type": "text",
       "required": true
     },
-    "slug": {
-      "type": "string"
-    },
     "categories": {
       "via": "posts",
       "collection": "category"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
     }
   }
 }
