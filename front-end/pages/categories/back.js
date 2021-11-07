@@ -17,7 +17,7 @@ export default function Home(props) {
         <h1> Todos os posts sobre Back-end</h1>
         {props.back.posts.map((item) => (
             <div>
-            <a href={`http://192.168.18.6:3000/posts/${item.id}`}>
+            <a href={`http://192.168.18.6:3000/posts/${item.slug}`}>
                 <div key={item.id} className={styles.postsHome}>
                 <h2>{item.title}</h2>
                 <p>{item.Resumo}</p>
