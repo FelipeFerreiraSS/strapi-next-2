@@ -1,5 +1,7 @@
 import styles from '../../styles/Home.module.css'
 import MarkdownIt from 'markdown-it'
+import Link from 'next/link'
+
 
 export default function Posts({info}) {
 
@@ -16,9 +18,11 @@ export default function Posts({info}) {
     <div className={styles.containerPost}>
         <div>
           <div className={styles.button}>
-            <a href="http://192.168.18.6:3000/">
-              <button>Home</button>
-            </a>
+            <Link href="http://192.168.18.6:3000/">
+              <a>
+                <button>Home</button>
+              </a>
+            </Link>
           </div>
           <h1>{info.title}</h1>
           <p>{info.Resumo}</p>
