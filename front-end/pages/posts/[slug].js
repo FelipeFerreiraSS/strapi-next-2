@@ -15,7 +15,11 @@ export default function Posts({info}) {
 
 
   return (
-    <div className={styles.containerPost}>
+    <>
+    <header>
+      <title>{info.title}</title>
+    </header>
+    <main className={styles.containerPost}>
         <div>
           <div className={styles.button}>
             <Link href="http://192.168.18.6:3000/">
@@ -30,7 +34,8 @@ export default function Posts({info}) {
           <img src={`http://localhost:1337${info.imagem.url}`} alt={info.Titulo}/>
           <section dangerouslySetInnerHTML={{__html: htmlTexto}}></section>
         </div>
-    </div>
+    </main>
+    </>
   )
 }
 

@@ -47,7 +47,7 @@ export default function Home(props) {
   )
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const res = await fetch('http://localhost:1337/posts')
   .then(res => res.json())
   return {
