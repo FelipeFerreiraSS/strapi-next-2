@@ -2,6 +2,8 @@ import styles from '../../styles/Home.module.css'
 import MarkdownIt from 'markdown-it'
 import Link from 'next/link'
 
+import Head from 'next/head'
+
 
 export default function Posts({info}) {
 
@@ -16,9 +18,9 @@ export default function Posts({info}) {
 
   return (
     <>
-    <header>
+    <Head>
       <title>{info.title}</title>
-    </header>
+    </Head>
     <main className={styles.containerPost}>
         <div>
           <div className={styles.button}>
