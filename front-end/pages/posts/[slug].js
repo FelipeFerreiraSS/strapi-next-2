@@ -13,9 +13,6 @@ export default function Posts({info}) {
 
   const htmlTexto = md.render(info.texto)  
 
-  console.log(`http://localhost:1337/${info.imagem.url}`)
-
-
   return (
     <>
     <Head>
@@ -41,12 +38,40 @@ export default function Posts({info}) {
   )
 }
 
-export async function getServerSideProps(context) {
-  const res = await fetch(`http://192.168.18.6:3000/api/posts/${context.params.slug}`)
-  const json = await res.json()
+
+export async function getStaticProps({ params }) {
+  const info = await fetch(`http://localhost:1337/posts/${params.slug}`)
+  const json = await info.json()
+
   return {
     props: {
-      info: json.info
-    }
-  }
+      info: json
+    },
+  };
 }
+
+export async function getStaticPaths() {
+  const info = await fetch(`http://localhost:1337/posts`)
+  const json = await info.json()
+
+  return {
+    paths: json.map((item) => {
+      return {
+        params: {
+          slug: item.slug,
+        },
+      }
+    }),
+    fallback: false,
+  };
+}
+
+// export async function getServerSideProps(context) {
+//   const res = await fetch(`http://192.168.18.6:3000/api/posts/${context.params.slug}`)
+//   const json = await res.json()
+//   return {
+//     props: {
+//       info: json.info
+//     }
+//   }
+// }
