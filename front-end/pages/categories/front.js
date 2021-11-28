@@ -12,7 +12,7 @@ export default function Home({front}) {
   return (
     <section className={styles.container}>
         <div className={styles.button}>
-            <Link href="http://192.168.18.6:3000/">
+            <Link href="/">
               <a>
                 <button>Home</button>
               </a>
