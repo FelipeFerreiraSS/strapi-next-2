@@ -21,7 +21,7 @@ export default function Home(props) {
         <h1> Todos os posts sobre Back-end</h1>
         {props.back.posts.map((item) => (
             <div>
-            <Link href={`http://192.168.18.6:3000/posts/${item.slug}`}>
+            <Link href={`/posts/${item.slug}`}>
               <a>
                 <div key={item.id} className={styles.postsHome}>
                   <h2>{item.title}</h2>
@@ -39,7 +39,7 @@ export default function Home(props) {
   )
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const res = await fetch('http://localhost:1337/categories/2')
   .then(res => res.json())
   return {
