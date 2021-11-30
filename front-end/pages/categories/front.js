@@ -39,7 +39,7 @@ export default function Home({front}) {
   )
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const res = await fetch('http://localhost:1337/categories/1')
   .then(res => res.json())
   return {
