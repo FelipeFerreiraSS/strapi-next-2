@@ -52,7 +52,16 @@ export async function getStaticProps() {
   .then(res => res.json())
   return {
     props: {
-      post: res
+      post: res.map((item) => {
+        return {
+          title: item.title,
+          slug: item.slug,
+          id: item.id,
+          Resumo: item.Resumo,
+          Data: item.Data,
+          imagem: item.imagem
+        }
+      })
     }
   }
 }
