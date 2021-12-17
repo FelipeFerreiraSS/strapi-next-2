@@ -3,6 +3,7 @@ import MarkdownIt from 'markdown-it'
 import Link from 'next/link'
 
 export default function Home(props) {
+  console.log(props)
 
   const md = new MarkdownIt({
     html: true
